@@ -24,6 +24,11 @@ s = {
                 }
         }
 }
+
+
+
+
+
 print(s[14]["scores"]["geometry"])
 
 print(list(s.values()))
