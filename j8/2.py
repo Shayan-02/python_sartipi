@@ -12,12 +12,13 @@ red = (255, 0, 0)
 green = (0, 255, 0)
 blue = (0, 0, 255)
 c = (0, 255, 255)
+firoozeee = (37, 190, 153)
 white = (255, 255, 255)
 black = (0, 0, 0)
 x_rect = 350
 y_rect = 500
 speed = 1
-fps = 300
+fps = 60
 
 running = True
 while running:
@@ -25,7 +26,7 @@ while running:
         if event.type == pg.QUIT:
             running = False
     win.fill(white)
-    pg.draw.rect(win, c, ((x_rect, y_rect), (100, 100)))
+    pg.draw.rect(win, firoozeee, ((x_rect, y_rect), (100, 100)))
     if x_rect >= 0 and y_rect == 500:
         x_rect += speed
     if y_rect <= 500 and x_rect == 700:

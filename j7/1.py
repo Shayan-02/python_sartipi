@@ -3,11 +3,11 @@
 # print("reverse number:", num[::-1])
 
 # 2
-# num2 = int(input("enter a number: "))
-# for i in range(1, num2+1):
-#     for j in range(1, num2+1):
-#         print(i*j, end="\t")
-#     print("\n")
+num2 = int(input("enter a number: "))
+for i in range(1, num2+1):
+    for j in range(1, num2+1):
+        print(i*j, end="\t")
+    print("\n")
 
 # 3
 # height = float(input("enter your height(in meter): "))
@@ -98,7 +98,7 @@
 # 5
 # def sum_of_series(m, n):
 #     """
-#      Calculates the sum of an arithmetic series with initial term m and n terms, where m and n are input by the user.
+#     Calculates the sum of an arithmetic series with initial term m and n terms, where m and n are input by the user.
 
 #     Args:
 #         m (int): initial term
@@ -115,30 +115,31 @@
 
 # m = int(input("Enter the initial term(m): "))
 # n = int(input("Enter the number of terms(n): "))
-# n = 3
 # result = sum_of_series(m, n)
 # print(f"The sum of the series for m={m} and n={n} is {result}")
 
 
 # 6
-# def get_inputs(n):
-#     """
-#     Gets n inputs from the user and returns them as a list.
 
-#     :param n: The number of inputs to get from the user.
-#     :return: A list of n inputs.
-#     """
 
-#     inputs = []
+def get_inputs(n):
+    """
+    Gets n inputs from the user and returns them as a list.
 
-#     if n < 1:
-#         raise ValueError("n must be greater than or equal to 1.")
-#     for i in range(1, n + 1):
-#         input_value = float(input(f"Enter input #{i}: "))
-#         inputs.append(input_value)
+    :param n: The number of inputs to get from the user.
+    :return: A list of n inputs.
+    """
 
-#     return inputs
+    inputs = []
 
-# count = int(input("how many inputs you want: ")) 
-# print("your inputs are: ", get_inputs(count))
+    if n < 1:
+        raise ValueError("n must be greater than or equal to 1.")
+    for i in range(n):
+        input_value = float(input(f"Enter input #{i+1}: "))
+        inputs.append(input_value)
 
+    return inputs
+
+
+count = int(input("how many inputs you want: "))
+print("your inputs are: ", get_inputs(count))
